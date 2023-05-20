@@ -94,8 +94,14 @@ videoEl.addEventListener('ended', function() {
         })
         currentSlide.classList.add("active")
 
-        imagesContainer.style.transform = `translateX(-${imageContainerSize * slideIndex}px)`
+        // if(slideIndex === dots.length - 1) {
+        //   imagesContainer.style.transform = "translateX(-400px)"
+        // } else {
+        //   imagesContainer.style.transform = `translateX(-${imageContainerSize * slideIndex}px)`
+        // }
 
+        imagesContainer.style.transform = `translateX(-${imageContainerSize * slideIndex}px)`
+        // console.log(imageContainer.get)
         
       } else {
         return
@@ -149,6 +155,12 @@ ScrollTrigger.create({
   pin: true
 })
 
+// ScrollTrigger.create({
+//   trigger: overflowSection,
+//   start: "top top",
+//   pin: true
+// })
+
 gsap.registerEffect({
   name: "swapText",
   effect: (targets, config) => {
@@ -170,7 +182,44 @@ const spanText = `Koach provides Talent as a Service through a platform connecti
 let textTl = gsap.timeline({repeat: -1});
 textTl.swapText(".fade-in", {text: "Introducing Koach", delay: .25})
 .swapText(".fade-in", {text: "Anytime, Anywhere."})
+// .swapText(".fade-in", {text: "Introducing Koach", delay: 2}); // back to the start
 
+
+// tl.fromTo(".zoom-out-section .h1-fade-in", {
+// display: "block",
+// duration: 0.5,
+//   // stagger: 3,
+//   // delay: 20,
+//   scrollTrigger: {
+//     trigger: ".zoom-out-section",
+//     toggleActions: "reverse, none, none, none",
+//     start: "top center",
+//     // end: `+=${zoomOutSectionHeight}`,
+//     scrub: 3,
+
+//     // markers: true
+//   }
+// })
+
+// tl.to(".zoom-out-section .fade-in", {
+//  display: "block",
+//   duration: 3,
+//   stagger: 3,
+//   // delay: 20,
+//   scrollTrigger: {
+//     trigger: ".zoom-out-section",
+//     toggleActions: "reverse, none, none, none",
+//     start: "30% center",
+//     end: `+=${zoomOutSectionHeight}`,
+//     scrub: 3,
+
+//     // markers: true
+//   }
+// })
+
+  
+
+//  console.log(window.innerWidth)
 
 gsap.to(".zoom-out-section .radial-gradient", {
   ease: "none",
@@ -288,6 +337,25 @@ gsap.fromTo(".bg-img", {
 }, "+=3");
 
 
+// or you can grab the numeric width/height (in pixels) like this (returns an object like {width: 100, height: 100})
+// let containSize = BackgroundSizePlugin.getSize(".photo", {size: "contain", nativeWidth: 1200, nativeHeight: 1200}); 
+// console.log("containSize:", containSize);
+
+  // gsap.to(".zoom-out-section .radial-gradient", {
+  //   ease: "none",
+  //   duration: 3,
+  //   scale: 0.25,
+  //   y: "100%",
+  //   scrollTrigger: {
+  //     trigger: zoomOutSection,
+  //     start: "top",
+  //     end: `${zoomOutSectionHeight}`,
+  //     scrub: 2
+  //   }
+  // })
+
+  // gsap.to(".zoom-out-section" )
+
   ScrollTrigger.create({
     duration: 5, 
     trigger: overflowSection,
@@ -297,6 +365,44 @@ gsap.fromTo(".bg-img", {
     pin: ".pinned",
   })
 
+  // gsap.to(".overflow-section .bg-img", {
+  //   // duration: 10,
+  //   ease: "none",
+  //   // delay: .5,
+  //   x: "0%",
+  //   scrollTrigger: {
+  //     trigger: ".options-section",
+  //     scrub: 3,
+  //     start: "top",
+  //     end: overflowSectionHeight
+
+  //   }
+  //   // clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+  //   // scale: 1
+  // }, "+=5")
+
+
+  // console.log(imageContainer)
+// const para = imagesContainer.querySelectorAll("p")
+// para.forEach(el => el.style.opacity = "0")
+  //   tl.to(overflowSection, {
+
+  //     // clipPath: "polygon(0 100%, 100% 100%, 89% 0, 16% 0)",
+  //     // color: "#fff",
+  //     // backgroundSize: "cover",
+  //     // backgroundSize: "128px 128px",
+  //   // y: 500,
+  //   // backgroundColor: "#29bf12",
+  //   duration: 5,
+  //   scrollTrigger: {
+  //     trigger: overflowSection,
+  //     start: "top 30%",
+  //     end: "bottom 90%",
+  //     scrub: 3, 
+  //     pin: ".pinned",
+  //     // markers: true
+  //   }
+  // })
   gsap.to(".overflow-section h3", {
     duration: 3,
     color: "#ffd60a",
@@ -306,7 +412,97 @@ gsap.fromTo(".bg-img", {
           scrub: 3,
           start: "top 30%",
           end: `bottom 90%`,
+//           markers: true
         }
   })
- 
+  // .to(imagesContainer, {
+  //   duration: 2,
+  //   stagger: 0.5,
+  //   y: -200,
+  //   borderColor: "#29bf12",
+  //   scrollTrigger: {
+  //     trigger: overflowSection,
+  //     scrub: 3,
+  //     start: "top 30%",
+  //     end: `bottom 90%`,
+  //     markers: true
+  //   }
+  // }, "-=5")
   
+  // .to( ".floating-text", {
+  //   display: "block",
+  //   // y: -200,
+  //   y: `-=${overflowSectionHeight / 3}`,
+  //   duration: 8,
+  //   scrollTrigger: {
+  //     trigger: ".options-section",
+  //     scrub: 1,
+  //     stagger: 2,
+  //     // start: `${overflowSectionHeight / 8}`,
+  //     // end: "300",
+  //     markers: true
+  //   }
+  // })
+
+  
+
+  // tl.to(".bg-black", {
+  //   duration: 0.25,
+  //   backgroundColor: "#000814",
+  //   scrollTrigger: {
+  //     trigger: ".third-image",
+  //     scrub: 3,
+  //     // start: "top 90%",
+  //     markers: true
+  //   }
+  // })
+
+ 
+
+}
+
+
+ 
+  // imageContainer.forEach(img => {
+  // tl.to(img, {
+  //     duration: 3,
+  //     opacity: 1,
+  //     stagger: 10,
+  //   y: -500,
+  //     scrollTrigger: {
+  //       trigger: ".image__container",
+  //       scrub: 5
+  //     }
+  //   })
+  // })
+
+  
+
+  // gsap.from(".intro-section .radial-gradient", {
+  //   scale: 100,
+  //   duration: 3,
+  //   scrollTrigger: {
+  //     trigger: ".intro-section",
+  //     toggleActions: "reverse, none, none, none",
+  //     // start: "top 5%",
+  //     end: `+=${introSectionHeight}`,
+  //     scrub: 3,
+  //     markers: true
+  //   }
+  // })
+
+  // pin: true,
+  // end: `+=${innerHeight} * 1.3`,
+  // scrub: 3
+
+  // gsap.to(".zoom-out-section .radial-gradient", {
+  //   scale: 0.25,
+  //   filter: "blur(0px)",
+  //   duration: 3,
+  //   scrollTrigger: {
+  //     trigger: ".zoom-out-section",
+  //     start: "top",
+  //     end: `-=${zoomOutSectionHeight} * 1.3`,
+  //     scrub: 3
+  //   }
+  // }, "-=5")
