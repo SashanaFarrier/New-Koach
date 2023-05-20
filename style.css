@@ -450,7 +450,7 @@ linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac
   /* width: 50%; */
   /* max-width: 700px; */
   
-  background-image: url(/images/puzzle.jpg);
+  background-image: url(./images/puzzle.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   
