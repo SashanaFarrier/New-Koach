@@ -412,7 +412,7 @@ gsap.fromTo(".bg-img", {
           scrub: 3,
           start: "top 30%",
           end: `bottom 90%`,
-          markers: true
+//           markers: true
         }
   })
   // .to(imagesContainer, {
