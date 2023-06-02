@@ -1117,6 +1117,10 @@ footer {
     }
 
 @media screen and (min-width: 46.875em){
+    .top__content_text {
+        font-size: 2rem;
+    }
+    
     .mission .flex-container,
     .mission .flex-container > .text-content {
         display: flex;
