@@ -1,338 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koach</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-     crossorigin=""/>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="top__content">
-        <header class="flex justify-between align-center">
-        <div class="logo__container">
-            <a href="#home">
-                <img class="logo" src="images/logo_white.png" alt="logo">
-            </a>
-        </div>
-        <div class="menu">
-            <p>MENU</p>
-            <div class="close-btn | hidden">
-                <i class="fa-regular fa-circle-xmark"></i>
-            </div>
-            
-            <div class="nav | hidden">
-                <ul role="list">
-                    <li><a href="">Find a Koach</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a class="join-btn" href="">Join Now</a></li>
-                    <li><a class="login-btn" href="">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div class="video__container">
-        <video autoplay muted playsinline height="850" id="video">
-            <source src="images/professionals-shaking-hands.mp4" type="video/mp4" class="active">    
-            <source src="images/professional-dancing.mp4" type="video/mp4">
-        </video>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Koach live</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="top__content" id="home">
 
-    <div class="top__content_body | flex align-center justify-center">
-        <div class="search__container">
-            <div class="">
-                <div class="search-box">
-                    <i class="fa fa-search"></i>
-                    <input type="search">
-                </div>
-                <div class="search-box--expand | hidden">
-                    <div class="search-box-container">
-                        <div class="search-btn | flex align-center">
-                          <input type="search" placeholder="search">
-                          <div class="close-btn | flex align-center">
-                            <span>X</span>
-                          </div>
-                        </div>
-                        <div class="search-results | flex justify-between">
-                          <div class="left-col">
-                            <p>Showing popular results</p>
-                            <ul>
-                              <li><a href="">Marketing</a></li>
-                              <li><a href="">Information Technology</a></li>
-                              <li><a href="">Ecommerce</a></li>
-                              <li><a href="">Software and Web Development</a></li>
-                              <li><a href="">Content Creation</a></li>
-                            </ul>
-                          </div>
-                          <div class="right-col">
-                            <p>Filter options</p>
-                            <div class="options">
-                                <div class="online">
-                                    <input type="radio" id="online" name="consultation">
-                                    <label for="online">
-                                        Online Consultation
-                                    </label>
+            <header>
+                <div class="header-content">
+                    <div class="container">
+                        <div class="flex-container | flex justify-between align-center">
+                            <div class="logo__container">
+                                <a href="#home">
+                                    <img class="logo" src="assets/logo_white.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="menu">
+                                <p>MENU</p>
+                                <div class="close-btn | hidden">
+                                    <i class="fa-regular fa-circle-xmark"></i>
                                 </div>
-                                <div class="offline">
-                                <input type="radio" id="offline" name="consultation">
-                                <label for="offline">
-                                    Offline Consultation
-                                </label>
+                                <div class="nav | hidden">
+                                    <ul role="list" class="flex">
+                                        <div class="list | flex">
+                                            <li><a href="/search.html">Find a Koach</a></li>
+                                            <li><a href="./about.html">About Us</a></li>
+                                            <li><a href="./contact.html">Contact Us</a></li>
+                                        </div>
+                    
+                                        <div class="cta-btns | flex">
+                                            <li><a class="join-btn" href="join.html">Join</a></li>
+                                            <li><a class="login-btn" href="login.html">Login</a></li>
+                                        </div>
+                    
+                                    </ul>
                                 </div>
                             </div>
-                            
-                             
-                          </div>
                         </div>
-                        <div class="location">
-                          <a>Find talents near you</a>
-                          <div id="map"></div>
-                        </div>
-                      </div>
-                    <!-- <div class="search">
-                        <div class="input-group">
-                             <i class="fa fa-search"></i>
-                            <input class="search-input" type="search" placeholder="search">
-                        </div>
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </div>
-                    <div class="search-content">
-                        <div class="left-col">
-                            <p>Showing popular results</p>
-                        </div>
-                        <div class="right-col">
-                            <p>Filter options</p>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        
-        <!-- <div class="input-group container | hidden">
-            <div class="location-input">
-                <i class="fa fa-search"></i>
-                <input class="search-input" type="search" placeholder="Find a location">
-            </div>
-            <div class="professional-input">
-                <i class="fa fa-search"></i>
-                <input class="search-input" type="search" placeholder="Find a professional">
-            </div>
-        </div> -->
-        <div class="top__content_text | container">
-            <p>We believe that <span class="yellow-text">expertise</span> is crucial for success.</p>
-        </div>
-        <!-- <div class="cta-btn-group | container flex justify-center">
-            <a class="login-btn | cta btn-outline">Login</a>
-            <a class="join-btn | cta">Join</a>
-        </div> -->
-        
-    </div>
-    </div>
-    <section class="zoom-out-section | flex justify-center align-center">
-        <div class="radial-gradient"></div>
-        <div class="container">
-            <h1 class="fade-in"></h1>
-            <!-- <p class="first-text first-text-fade-in fade-in"> Koach provides <span class="yellow-text">Talent as a Service</span> through a platform connecting businesses with subject matter experts.</p> -->
-            <!-- <p class="second-text second-textfade-in fade-in">Anytime, Anywhere.</p> -->
-        </div>
-        
-        <div class="cta-text | container flex justify-center align-center">
-            <h2 class="yellow-text">Join.</h2>
-            <!-- <h2 class="black-text">Search.</h2> -->
-            <h2 class="green-text">Connect.</h2>
-        </div>
-         <div class="cta-btn-group | container flex justify-center">
-            <a class="learn-more cta">Learn more</a>
-            <a class="join cta">Join for free</a>
-        </div>
-    </section>
-    <!-- <section class="intro-section">
-        <div class="radial-gradient"></div>
-        <div class="container">
-            <div class="intro-text">
-                <h2>Anytime, Anywhere.</h2>
-            </div>
-                <h3>Introducing Koach</h3>
-            
-                <p>A platform that creates a bridge between those who know and those who want to know.</p>
-                
-                <p> Koach provides <span class="yellow-text">Talent as a Service</span> through a platform connecting businesses with subject matter experts.</p>
-                <a class="cta btn-outline" href="">Get started today</a>
-         
-             
-            <div class="animated-video">
-                <video autoplay muted playsinline loop>
-                    <source src="images/animated video.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div> 
-    </section> -->
-    <section class="options-section">
-        <div class="options container">
-            <ul class="flex">
-                <li><a href="">
-                    <div class="icon | flex align-center justify-center">
-                        <i class="fa-solid fa-earth-americas"></i>
-                    </div>
-                    <h3>Meet Koaches and Mentors</h3>
-                    <p>Meet Koaches and mentors anywhere in the world from the comfort of your home.</p>
-                </a></li>
-                <li><a href="">
-                    <div class="icon | flex align-center justify-center">
-                        <i class="fa-solid fa-laptop"></i>
-                    </div>
-                    <h3>Get online consultation</h3>
-                    <p>Meet with a professional within 60 seconds for online consultation.</p>
-                </a>
-                </li>
-                <li><a href="">
-                    <div class="icon | flex align-center justify-center">
-                        <i class="fa-regular fa-handshake"></i>
-                    </div>
-                    <h3>Meet face to face</h3>
-                    <p>Want to meet up with a professional in person?
-                        Find out who's in your area today.
-                    </p>
-                </a></li>
-            </ul>
-        </div>
-    </section>
-    <!-- <section>
-        <div class="intro container | flex justify-center">
-            <div class="intro-text">
-                <<h3>Introducing Koach</h3>
-                <p>A platform that creates a bridge between those who know and those who want to know.</p>
-                <p> Koach provides Talent as a Service through a platform connecting businesses with subject matter experts.</p>
-                <a class="cta btn-outline" href="">Get started today</a>
-            </div>
-            
-            <div class="animated-video">
-                <video autoplay muted playsinline loop>
-                    <source src="images/animated video.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div> 
-    </section> -->
-    <section class="overflow-section">
-        <div class="bg-img">
-             <!-- <img src="/images/puzzle.jpg" alt=""> -->
-        </div>
-       
-        <div class="info | container flex">
-            <div class="info-text pinned">
-                <h2>Find the right solution in top specialities today</h2>
-                <a class="cta btn-outline" href="">Get connected today</a>
-                <div class="floating-images">
-                    <!-- <img class="p1 floating-img" src="/images/p1.png" alt="">
-                    <img class="p2 floating-img" src="/images/p2.png" alt=""> -->
-                   </div>
-            </div>
-           
-            <div class="carousel">
-                <div class="images__container | flex">
-                    <div class="image__container first-image | active">
-                        <img src="images/man-in-business-suit.jpg" alt="">
-                        <h3>Consult with verified professionals</h3>
-                        <p>Consulting with verified professionals may lead to life changing experiences.</p>
-                    </div>
-                    <div class="image__container second-image">
-                        <img src="images/woman-writing.jpg" alt="">
-                        <h3>Find Expert Support</h3>
-                        <p>A seamless matching experience for businesses seeking expert support.</p>
-                    </div>
-                    <div class="image__container third-image">
-                        <img src="images/talk face to face.jpg" alt="">
-                        <h3>Find a Koach</h3>
-                        <p>It's never too late to find the professional help you need.</p>
                     </div>
                 </div>
-            </div>
-            <div class="dots | flex justify-center">
-                <span class="dot | active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            <!-- <a class="cta btn-outline" href="">Join now</a> -->
-        </div>    
-    </section>
-    <section class="bg-black">
-        <div class="container">
-            <h2>Let's help you connect with expert professionals</h2>
-            <div class="bg-black-body">
-                <!-- <p>A platform that creates a bridge between those who know and those who want to know.</p> -->
-                <p> Koach provides <span class="yellow-text">Talent as a Service</span> through a platform connecting businesses with subject matter experts.</p>
-               <p>Our premium platform connects organizations with highly qualified independent management consultants and industry experts.</p>
-               <a class="cta btn-outline" href="">Join now</a>
-            </div>
-        
-        </div>
-        
-        <div class="video-section container">
+            </header>
             <div class="video__container">
-                <video autoplay muted playsinline loop height="400" id="section-video">
-                    <source src="images/person using tablet.mp4" type="video/mp4" class="active">    
-                    <!-- <source src="images/professional-dancing.mp4" type="video/mp4"> -->
+                <video autoplay muted playsinline loop height="850" id="video">
+                    <source src="assets/professionals-shaking-hands.mp4"
+                        type="video/mp4" class="active">
                 </video>
             </div>
-            
-        </div>
-        
-    </section>
-    <footer>
-        <div class="footer__container | container flex justify-between">
-            <div class="left-col">
-                <div class="logo__container">
-                    <a href="#home">
-                        <img class="logo" src="images/logo_white.png" alt="logo">
-                    </a>
+
+            <div class="top__content_body | flex align-center justify-center">
+                <div class="search__container | container flex align-center">
+                    <div class="search-inputs">
+                        <div class="location | input">
+                            <i class="fa-solid fa-location-dot | icon"></i>
+                            <input type="search" name id="location"
+                                placeholder="search location">
+                        </div>
+                        <div class="profession | input">
+                            <i class="fa-solid fa-magnifying-glass | icon"></i>
+                            <input type="search" name id="profession"
+                                placeholder="search for talent or profession">
+                        </div>
+
+                    </div>
+                    <div class="options | flex">
+                        <div class="online">
+                            <button>Online Consultation</button>
+                        </div>
+                        <div class="offline">
+                            <button>Offline Consultation</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <ul role="list"> 
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li><a href="">Explore</a></li>
-                        <li><a href="">Become a Koach</a></li>
-                    </ul>
+
+                <div class="top__content_text | container">
+                    <p>We believe that <span class="underline-text">expertise</span>
+                        is crucial for success.</p>
                 </div>
             </div>
-           <div class="right-col | flex justify-between">
-                <div class="social__links | flex">
-                    <li class="facebook"><a href="https://www.facebook.com/koachoff/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
-                    </a></li>
-                    <li class="twitter"><a href="https://twitter.com/KoachOff" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"/></svg>
-                    </a></li>
-                    <li class="instagram"><a href="https://www.instagram.com/koachoff/" target="_blank">
-                    <svg viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg>
-                    </a></li>
-                    <li class="linkedin"><a href="https://www.linkedin.com/company/koachoff" target="_blank">
-                    <svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                    </a></li>
-                </div>
-                <p>Copyright &copy 2023, KOACH. <br>All rights reserved.</p>
-           </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <!-- scroll Magic -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="index.js"></script>
-</body>
+        <main>
+            <section class="intro">
+                <div class="container">
+                    <h1>Introducing <span class="koach">Koach</span></h1>
+                    <div class="flex-container">
+                        <div class="para">
+                            <p class="para-1">A platform that creates a bridge
+                                between those who know and those who want to
+                                know.</p>
+                            <p class="para-2"><span class="koach">Koach</span>
+                                provides Talent as a Service through a platform
+                                connecting businesses with subject matter
+                                experts.
+                            </p>
+                            <div class="cta">
+                                <a href="./join.html">Join us today
+                                    <i class="fa-solid fa-arrow-right-long fa-beat"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="img-container">
+                           <img src="./assets/online-platform.png" alt="">
+                            <!-- <img src="./assets/blob.svg" alt=""> -->
+                          
+                           <!-- <img src="./assets/hand-shake.png" alt=""> -->
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="mission">
+                <div class="container flex-container">
+                    <h2>We'll help you find the missing links</h2>
+                    <div class="text-content">    
+                        <p class="para-1">Our premium platform connects organizations with highly qualified independent management consultants and industry experts.</p>
+                        <img src="./assets/—Pngtree— human puzzle pieces_3990099.png" alt="">
+                    </div>
+                    <p>Already have an account? <a class="cta" href="">Login here</a></p>
+                </div>
+            </section>
+            <section class="list">
+                <div class="container flex-container">
+                    <h2>Anytime. Anywhere</h2>
+                    <div class="cards | flex">
+                        <div class="img-w-text">
+                            <img src="./assets/woman-shaking-hands.jpg" alt="woman shaking hands with someone and smiling">
+                            <h3>Meet Koaches and Mentors</h3>
+                            <p class="para-1"> Meet koaches and mentors where you are anywhere in the world.</p>
+                        </div>
+                        <div class="img-w-text">
+                            <img src="./assets/online consultation.jpg" alt="people engaged in online meeting">
+                            <h3>Get online consultation</h3>
+                            <p class="para-1">Meet with a profession within 60 seconds for online consultation.</p>
+                        </div>
+                        <div class="img-w-text">
+                            <img src="./assets/talk face to face.jpg" alt="women talking face to face">
+                            <h3>Meet face to face</h3>
+                            <p class="para-1">Meet face to face with a professional today. Find a service near you and get in touch.</p>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+            <section class="grid">
+                <div class="container">
+                    <h2 class="join-text">Join.</h2>
+                    <h2 class="connect-text">Connect.</h2>
+                    <div class="grid-items">
+                        <p class="para-1">A seamless matching experience for businesses seeking.</p>
+                        <img src="./assets/man-in-business-suit.jpg" alt="man in business suit">
+                        <p class="para-2">Take your business to new heights. Find the right solution in top specialities today!</p>
+                        <img src="./assets/woman-writing-on-whiteboard.jpg" alt="woman writing on whiteboard">
+                    </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <section class="featured">
+                <div class="container | flex-container">
+                    <img src="./assets/man-and-woman-highfiving.jpg" alt="professional man and woman smiling and highfiving">
+                    <div class="info">
+                        <h2>Consult with verified professionals</h2>
+                        <h3>Featured Talents</h3>
+                        <ul>
+                            <li>Marketing</li>
+                            <li>Data Operations</li>
+                            <li>Information Technology</li>
+                            <li>Education</li>
+                            <li>Content Creation</li>
+                        </ul>
+                        <div class="cta">
+                            <a href="./contact.html">Get in touch today</a>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer__container | container flex justify-between">
+                <div class="left-col">
+                    <div class="logo__container">
+                        <a href="#home">
+                            <img class="logo" src="assets/logo_white.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="footer-nav">
+                        <ul role="list"> 
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="">Explore</a></li>
+                            <li><a href="">Become a Koach</a></li>
+                        </ul>
+                    </div>
+                </div>
+               <div class="right-col | flex justify-between">
+                    <div class="social__links | flex">
+                        <li class="facebook"><a href="https://www.facebook.com/koachoff/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+                        </a></li>
+                        <li class="twitter"><a href="https://twitter.com/KoachOff" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"/></svg>
+                        </a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/koachoff/" target="_blank">
+                        <svg viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg>
+                        </a></li>
+                        <li class="linkedin"><a href="https://www.linkedin.com/company/koachoff" target="_blank">
+                        <svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                        </a></li>
+                    </div>
+                    <p>Copyright &copy 2023, KOACH. <br>All rights reserved.</p>
+               </div>
+            </div>
+        </footer>
+        <script src="./index.js"></script>
+    </body>
 </html>
