@@ -161,7 +161,17 @@ h2 {
 .header-content {
   position: relative;
   padding: var(--spacer-1em);
+  width: 100%;
   /* background-color: var(--clr-black); */
+}
+
+header .menu {
+  /* background-color: #000;
+  position: absolute;
+  inset: 0;
+  padding: var(--spacer-2em);
+  height: 100vh;
+  z-index: -1; */
 }
 
 header .menu p {
@@ -185,6 +195,10 @@ header .menu .close-btn {
 color: var(--clr-white);
 position: relative;
 z-index: 999;
+/* position: absolute;
+top: var(--spacer-1em);
+right: var(--spacer-1em);
+z-index: 9999; */
 }
 
 .nav {
@@ -244,6 +258,18 @@ z-index: 999;
   color: var(--clr-white);
   background-color: var(--clr-blue);
 }
+
+header .menu {
+ 
+  /* height: 50px; */
+}
+
+/* .nav .cta-btns {
+  flex-direction: column;
+  gap: var(--spacer-1em);
+}  */
+
+
 
 .top__content_body {
   flex-direction: column;
@@ -368,6 +394,26 @@ z-index: 999;
     margin-top: var(--spacer-2em);
   }
 
+  .intro img {
+   /* max-width: 600px; */
+    /* position: absolute; */
+   
+  }
+
+  .intro img:first-of-type {
+    /* width: 600px;
+    top: -150px;
+    opacity: .5; */
+    /* top: 300px; */
+  }
+
+  .intro img:last-of-type {
+    /* width: 250px;
+    right: -50px;
+    top: 50px; */
+    /* filter: opacity(.7); */
+  }
+
   /* mission section styles */
 
   .mission {
@@ -462,6 +508,10 @@ z-index: 999;
     background-color: var(--clr-blue);
     background: rgb(22,19,54);
     background: radial-gradient(circle, rgba(22,19,54,1) 0%, rgba(49,62,245,1) 36%);
+    /* color: #fff; */
+    /* background-color: rgb(22 19 54); */
+    /* background-color: rgb(231, 228, 228); */
+    /* background-color: rgb(205, 245, 235); */
 }
 
 .grid h2 {
@@ -563,6 +613,10 @@ footer {
   .footer-nav {
     margin-top: 1em;
   }
+
+  .footer-nav ul[role="list"] li {
+    margin-top: .5em;
+  }
   
   footer a {
     color: inherit;
@@ -627,6 +681,10 @@ footer {
   }
 
    /* contact form styles */
+
+   .contact-main {
+    overflow: hidden;
+   }
  
     .form-container input, 
     .form-container textarea { 
@@ -656,7 +714,7 @@ footer {
 
     form {
     position: relative;
-    width: 80%;
+    width: 100%;
     border-radius: 30px;
     background: var(--clr-offWhite);
     box-shadow: 0px 0px 50px var(--clr-text-primary-light);
@@ -773,6 +831,10 @@ footer {
       --clr-text-primary-light: rgba(22 19 54 /.5);
       background-color: var(--clr-text-primary-light);
       /* position: relative; */
+    }
+
+    .about-header  .flex-container {
+      width: 100%;
     }
 
     .hero {
@@ -1018,7 +1080,8 @@ footer {
    {
     content: "";
     position: absolute;
-    width: 150px;
+    width: 45%;
+    max-width: 150px;
     height: 2px;
     background-color: var(--clr-text-primary-light);
   }
@@ -1060,6 +1123,19 @@ footer {
     .grid .grid-items > p {
         font-size: 1.5rem;
     }
+
+
+    /* intro section styles */
+
+    /* .intro .flex-container {
+        align-items: center;
+        gap: var(--spacer-3em);
+    } */
+
+    /* .intro .flex-container > .para {
+        flex-basis: 65%;
+        max-width: 500px;
+    } */
 
     /* mission section styles */
 
@@ -1264,14 +1340,27 @@ footer {
         display: flex;
     }
 
+
     footer .left-col
      {
+      align-items: center;
         gap: var(--spacer-4em);
+        flex-basis: 70%;
+        gap: 1em;
+    }
+
+    .footer-nav {
+      margin-top: 0px;
     }
 
     footer .left-col ul 
      {
         gap: var(--spacer-1em);
+        
+    }
+
+    footer .left-col ul li {
+      margin-top: 0px;
     }
 
     footer .right-col {
@@ -1309,7 +1398,6 @@ footer {
     max-width: 50%;
   }
 }
-
 
 /* utilities */
 
