@@ -136,7 +136,7 @@ header {
     justify-content: center;
     z-index: 999;
     padding-block: var(--spacer-1em);
-    height: 20vh;
+    height: 15vh;
 }
 
 section {
