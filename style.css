@@ -130,11 +130,13 @@ overflow: hidden;
 
 header {
   font-size: 1.5rem;
-  position: absolute;
-  inset: 0;
-  z-index: 999;
-  /* padding: var(--spacer-1em); */
-  height: 10vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding-block: var(--spacer-1em);
+    height: 20vh;
 }
 
 section {
@@ -273,13 +275,14 @@ header .menu {
 
 .top__content_body {
   flex-direction: column;
-  gap: var(--spacer-2em);
-  position: absolute;
-  inset: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  /* margin: auto; */
-  z-index: 100;
+    gap: var(--spacer-2em);
+    position: relative;
+    inset: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    margin-top: var(--spacer-3em);
+    z-index: 100;
 }
 
 /* search container styles */
@@ -348,7 +351,8 @@ header .menu {
 
 .top__content_text {
     /* font-family: Mogra, sans-serif, system-ui; */
-    font-size: clamp(2rem, 2rem + 1vw, 4rem);
+/*     font-size: clamp(2rem, 2rem + 1vw, 4rem); */
+    font-size: 1.5rem;
     color: var(--clr-white);
     font-weight: bold;
     text-align: center;
