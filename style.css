@@ -129,7 +129,7 @@ overflow: hidden;
 }
 
 header {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
     display: flex;
     position: relative;
     align-items: center;
